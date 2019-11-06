@@ -1,0 +1,37 @@
+// 左右居中
+#middle(@value) {
+  width: @value;
+  margin: 0 auto;
+}
+
+// 正方形
+#square(@value) {
+  width: @value;
+  height: @value;
+}
+
+// 圆形
+#round(@value) {
+  #square(@value);
+  border-radius: 50%;
+}
+
+#flex-justify-center() {
+  display: flex;
+  justify-content: center;
+}
+
+#flex-justify-between() {
+  display: flex;
+  justify-content: space-between;
+}
+
+#flex-center() {
+  #flex-justify-center();
+  align-items: center;
+}
+
+#flex-between() {
+  #flex-justify-between();
+  align-items: center;
+}

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import history from '../../../utils/history'
 import './index.less'
-import { Menu, Icon, Button } from 'antd';
+import { Menu,Icon, Button } from 'antd';
 
 // const SubMenu = Menu.SubMenu;
 export interface Iprops {

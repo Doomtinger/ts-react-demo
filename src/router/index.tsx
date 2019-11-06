@@ -16,6 +16,10 @@ const routes: RouteType[] = [
         component: React.lazy(() => import('../views/Video/index'))
     },
     {
+        path: '/home',
+        component: React.lazy(() => import('../views/Home/index'))
+    },
+    {
         path: '/404',
         component: React.lazy(() => import('../components/NotFoundPage/index'))
     }

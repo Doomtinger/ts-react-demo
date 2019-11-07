@@ -1,42 +1,56 @@
 import * as React from 'react'
 import './index.less'
 import history from '../../../utils/history'
-// 图片
-
-interface IProps {
+import CommonMenuComponent from '../CommonMenuComponent'
+export interface menus  {
+    title: string,
+    icon: string,
+    key: string,
+    subs?: menus[]
 }
-interface IState {
+// 图片
+export interface IProps {
+    
+}
+export interface IState {
+    collapsed: Boolean,
 }
 class CommonHeaderComponent extends React.Component<IProps, IState> {
-    constructor(IProps: Readonly<IProps>) {
-        super(IProps)
-        this.state = {
-
-        }
+    state = {
+        collapsed: false
     }
 
     componentDidMount() {
-
+        
     }
 
     render() {
+        const menus: menus[] = [
+            {
+                title: '首页',
+                icon: 'home',
+                key: '/home'
+            },
+            {
+                title: '基本组件',
+                icon: 'laptop',
+                key: '/home/general',
+                subs: [
+                    { key: '/home/general/button', title: '按钮', icon: '', },
+                    { key: '/home/general/icon', title: '图标', icon: '', },
+                ]
+            },
+        ]
         return (
             <div className="common-header flex">
-                哈哈哈哈
+                <div className="menu-logo">
+                    <img src={require("../../../assets/svg/header/logo.svg")} alt=""/>
+                </div>
+                <div className="menu-content">
+                    <CommonMenuComponent menus={menus}></CommonMenuComponent>
+                </div>
             </div>
         )
-    }
-
-    jumpHome = () => {
-        history.push({ pathname: '/' })
-    }
-
-    jumpLogin = () => {
-        history.push({ pathname: '/login' })
-    }
-
-    jumpRegister = () => {
-        history.push({ pathname: '/login' })
     }
 }
 

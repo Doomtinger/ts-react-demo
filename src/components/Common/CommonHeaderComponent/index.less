@@ -1,72 +1,24 @@
 .common-header {
     width:100%;
-    height:60px;
-    padding:0 100px;
+    height:50px;
+    // padding:0 100px;
     position:fixed;
-    background: rgba(69,200,220);
+    background-color: #333333;
     border-bottom: 1px #e6e6e6 solid;
     top:0;
     left:0;
     z-index:10;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    .header-logo {
-        width:100px;
-        height:32px;
-        cursor: pointer;
-    }
-    .user-contain {
-        height:100%;
-        align-items: center;
-        .header-login,.header-register {
-           font-size:14px;
-           color: #f0f0f0;
-           cursor: pointer;
-        }
-        .header-login:hover,.header-register:hover {
-            color:#fff;
-        }
-        .user-pic {
-            width:40px;
-            height:40px;
-            border-radius:50%;
-            margin-right:15px;
-            cursor: pointer;
-        }
-        .user-name {
-            font-size:14px;
-            height: 100%;
-            line-height: 60px;
-            color:#757E80;
-            cursor: pointer;
-            position: relative;
-            .user-center {
-                min-width:140px;
-                box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.08);
-                position: absolute;
-                left: -50px;
-                top: 58px;
-                background: #fff;
-                display: none;
-                border-radius:4px;
-                .go-out {
-                    width:100%;
-                    height: 30px;
-                    line-height: 30px;
-                    padding-left:15px;
-                    text-align: left;
-                    border-radius:4px;
-                }
-                .go-out:hover {
-                    background: #45cdd7;
-                    color: #fff;
-                }
-            }
-        }
-        .user-name:hover {
-            .user-center {
-                display: block;
-            }
+    .menu-logo {
+        width: 80px;
+        z-index: 99;
+        // background-color: #fff;
+        >img {
+            display: block;
+            width: 78px;
+            height: 27px;
         }
     }
 }
